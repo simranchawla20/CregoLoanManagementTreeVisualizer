@@ -1,12 +1,43 @@
-# React + Vite
+# Crego Loan Management Tree Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a visual tool I built to represent and manage the hierarchy between accounts, loans, and collaterals. It's mainly designed to help understand the relationships and dependencies within a loan management structure in a more intuitive, tree-based format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Add nodes like Account, Loan, and Collateral
+- Only valid child types can be added (based on type rules)
+- Handles connect automatically with visual edges
+- Side panel shows node details when selected
+- Fully responsive and smooth transitions
+- Tree layout auto-adjusts when nodes are added/removed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Node Rules
+
+Each node has allowed children:
+
+- Account ➝ Loan, Collateral  
+- Loan ➝ Collateral  
+- Collateral ➝ no children
+
+This structure is managed using Zustand store.
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Zustand for state management
+- TailwindCSS for styling
+- React Flow for the visual editor
+- Netlify (for deployment)
+
+---
+
+## Public link
+
+- https://crego-loan-management.netlify.app/
+
